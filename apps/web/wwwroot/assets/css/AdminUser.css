@@ -1,0 +1,111 @@
+/* Layout  */
+main {
+  margin-left: var(--sidebar-width);
+  padding: 40px;
+}
+
+h1 {
+  text-align: center;
+  color: var(--color-white);
+  margin-bottom: 30px;
+}
+
+/* Table  */
+.faq-table td:last-child {
+  text-align: center;
+}
+
+/* Hidden state  */
+.modal.hidden {
+  display: none !important;
+}
+
+/* Base */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* When active */
+.modal.show {
+  display: flex;
+}
+
+/* Modal box */
+.modal-content {
+  background: var(--color-white);
+  width: 460px;
+  max-width: 92%;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  padding: 28px 32px;
+
+  animation: popIn 0.2s ease-out;
+}
+
+/* Animation */
+@keyframes popIn {
+  from {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Close button */
+.close-btn {
+  padding: 8px;
+  float: right;
+  border: none;
+  background: transparent;
+  font-size: 22px;
+  cursor: pointer;
+  color: var(--color-text-muted);
+  transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+  color: var(--color-danger);
+}
+
+/* Modal title */
+.modal-content h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--color-primary-dark);
+}
+
+/* Form spacing inside modal */
+#create-user-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Field error spacing FIX */
+.field-error {
+  font-size: 0.8rem;
+  margin-top: 4px;
+  color: var(--color-danger);
+}
+
+/* Make selects consistent spacing */
+#create-user-form input,
+#create-user-form select {
+  padding: 12px 14px;
+  border-radius: var(--radius-md);
+}
+
+/* Submit button spacing */
+#create-user-form button[type="submit"] {
+  margin-top: 10px;
+}

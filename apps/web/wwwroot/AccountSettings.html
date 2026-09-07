@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="nl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Account Instellingen</title>
+        <link rel="stylesheet" href="/assets/css/global.css">
+        <link rel="stylesheet" href="/assets/css/AccountSetting.css" />
+    </head>
+
+    <body>
+        <admin-sidebar></admin-sidebar>
+        <header class="hero">
+            <h1>Account Instellingen</h1>
+            <p>Hier kun jij jou account instellingen wijzigen</p>
+        </header>
+
+        <main class="account-settings-page">
+            <section class="container">
+                <section class="inloggegevens">
+                    <h2>Inloggegevens</h2>
+                    <form id="login-form">
+                        <label for="email">Email address</label>
+                        <input type="email" id="email" readonly />
+
+                        <label for="current-password">Wachtwoord</label>
+                        <input type="password" id="current-password" placeholder="••••••••" readonly />
+
+                        <label for="new-password" class="nieuw-veld">Nieuw wachtwoord</label>
+                        <input type="password" id="new-password" placeholder="Nieuw wachtwoord" class="nieuw-veld" />
+
+                        <p id="login-error" class="error-message"></p>
+                        <p id="login-success" class="success-message"></p>
+                        <button type="button" id="login-edit-btn" class="wijzigen-btn">Wijzigen</button>
+                        <button type="submit" id="login-save-btn" class="opslaan-btn">Opslaan</button>
+                    </form>
+                </section>
+
+                <section class="werkschema">
+                    <h2>Werkschema</h2>
+                    <form id="profile-form">
+                        <label for="name">Vaste Werkdagen:</label>
+                        <section class="schema-container">
+                            <label class="schema-row">Maandag<input type="checkbox" value="Maandag" /></label>
+                            <label class="schema-row">Dinsdag<input type="checkbox" value="Dinsdag" /></label>
+                            <label class="schema-row">Woensdag<input type="checkbox" value="Woensdag" /></label>
+                            <label class="schema-row">Donderdag<input type="checkbox" value="Donderdag" /></label>
+                            <label class="schema-row">Vrijdag<input type="checkbox" value="Vrijdag" /></label>
+                            <label class="schema-row">Zaterdag<input type="checkbox" value="Zaterdag" /></label>
+                            <label class="schema-row">Zondag<input type="checkbox" value="Zondag" /></label>
+                        </section>
+                        <p id="profile-error" class="error-message"></p>
+                        <p id="profile-success" class="success-message"></p>
+                        <button type="button" id="profile-edit-btn" class="wijzigen-btn">Wijzigen</button>
+                        <button type="submit" id="profile-save-btn" class="opslaan-btn">Opslaan</button>
+                    </form>
+                </section>
+            </section>
+        </main>
+        <script src="/src//pages/AccountSettings.ts" type="module"></script>
+    </body>
+</html>

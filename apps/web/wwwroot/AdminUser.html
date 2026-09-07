@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/AdminUser.css">
+    <title>User Administration</title>
+</head>
+
+<body>
+    <admin-sidebar></admin-sidebar>
+
+    <main>
+        <h1>gebruiker Management</h1>
+
+        <button id="open-create" class="btn btn-add mb-2">
+            + Nieuwe gebruiker
+        </button>
+
+        <table class="faq-table">
+            <thead>
+                <tr>
+                    <th>Naam</th>
+                    <th>Email</th>
+                    <th>Rol</th>
+                    <th>Afdeling</th>
+                    <th>Stad</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody id="user-container"></tbody>
+        </table>
+
+        <!-- Modal -->
+        <div id="user-modal" class="modal hidden">
+            <div class="modal-content">
+                <button id="close-modal" class="close-btn">✕</button>
+
+                <h2>Gebruiker toevoegen</h2>
+
+                <form id="create-user-form">
+                    <input type="text" id="user-name" placeholder="Naam" required />
+                    <input type="email" id="user-email" placeholder="Email" required />
+                    <input type="password" id="user-password" placeholder="Wachtwoord" minlength="8" />
+
+                    <select id="user-role" required>
+                        <option value="">Select role</option>
+                    </select>
+
+                    <select id="user-department" required>
+                        <option value="">Select department</option>
+                        <option value="IT">IT</option>
+                        <option value="HR">HR</option>
+                        <option value="Logistiek">Logistiek</option>
+                        <option value="Office">Office</option>
+                    </select>
+
+                    <select id="user-location" required>
+                        <option value="">Select locatie</option>
+                        <option value="Dorpsstraat 1|Utrecht">Dorpsstraat 1 - Utrecht</option>
+                        <option value="Stationsplein 5|Utrecht">Stationsplein 5 - Utrecht</option>
+                        <option value="Damrak 1|Amsterdam">Damrak 1 - Amsterdam</option>
+                        <option value="Keizersgracht 100|Amsterdam">Keizersgracht 100 - Amsterdam</option>
+                        <option value="Coolsingel 1|Rotterdam">Coolsingel 1 - Rotterdam</option>
+                        <option value="Blaak 10|Rotterdam">Blaak 10 - Rotterdam</option>
+                    </select>
+
+                    <button type="submit" class="btn btn-primary w-full">
+                        Opslaan
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="/src/pages/AdminUser.ts"></script>
+</body>
+</html>

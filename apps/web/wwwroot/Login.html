@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Inloggen</title>
+        <link href="/assets/css/Login.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <main class="login-page">
+            <h1 class="login-title">LOGIN</h1>
+            <figure class="avatar">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="110" height="110">
+                    <circle cx="50" cy="50" r="50" fill="#d0ede3" />
+                    <circle cx="50" cy="38" r="18" fill="#8fc9b0" />
+                    <ellipse cx="50" cy="88" rx="30" ry="22" fill="#8fc9b0" />
+                </svg>
+            </figure>
+
+            <form id="login-form" novalidate>
+                <label for="email">Gebruikersnaam</label>
+                <input type="email" id="email" name="email" autocomplete="email" required />
+
+                <label for="password">Wachtwoord</label>
+                <input type="password" id="password" name="password" autocomplete="current-password" required />
+
+                <p id="error-message" class="error-message" role="alert" hidden></p>
+
+                <p class="forgot-password">
+                    <span class="divider-line"></span>
+                    <a href="#">Wachtwoord vergeten?</a>
+                    <span class="divider-line"></span>
+                </p>
+
+                <button type="submit">Login</button>
+            </form>
+
+        </main>
+
+        <script src="/src/pages/Login.ts" type="module"></script>
+    </body>
+
+</html>

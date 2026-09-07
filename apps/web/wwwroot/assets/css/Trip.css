@@ -1,0 +1,89 @@
+.trip-page {
+    width: 75%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.co2-summary {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.co2-content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    background: white;
+    min-width: 250px;
+}
+
+.co2-summary h3 {
+    margin: 0;
+    font-size: 1rem;
+    color: black;
+    text-transform: uppercase;
+}
+
+.co2-summary p {
+    margin: 10px 0 0;
+    font-size: 1.5rem;
+    color: #42ba82;
+}
+
+.filters {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 20px auto;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-group label {
+    font-weight: bold;
+    color: white;
+    margin-bottom: 0;
+    white-space: nowrap;
+}
+
+.filter select,
+.filter-group input[type="date"] {
+    padding: 8px 15px;
+    border-radius: 8px;
+    border: none;
+    background-color: white;
+    font-size: 1rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+td:nth-child(4) {
+    color: var(--color-primary);
+}
+
+td:nth-child(2),
+td:nth-child(3) {
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.footer-actions {
+    max-width: 1200px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-secondary {
+    padding: 10px 40px;
+    border-radius: 20px;
+}

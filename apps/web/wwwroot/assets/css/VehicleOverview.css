@@ -1,0 +1,103 @@
+/* ---------- Vehicle Overview Specific Styles ---------- */
+
+/* Clickable rows */
+.faq-table tbody tr {
+    cursor: pointer;
+}
+
+/* ---------- MODAL ---------- */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition);
+}
+
+.modal.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Modal box */
+.modal-content {
+    position: relative;
+    background: var(--color-white);
+    padding: 30px;
+    width: 450px;
+    max-width: 90%;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* 🔥 IMPORTANT spacing */
+
+    transform: translateY(20px);
+    transition: transform var(--transition);
+}
+
+.modal.show .modal-content {
+    transform: translateY(0);
+}
+
+/* ---------- CLOSE BUTTON ---------- */
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text-muted);
+    transition: color var(--transition);
+}
+
+.close-btn:hover {
+    color: var(--color-danger);
+}
+
+/* ---------- FORM SPACING ---------- */
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Fix button inside form */
+.modal-content button[type="submit"] {
+    margin-top: 10px;
+}
+
+/* ---------- ERROR TEXT ---------- */
+.field-error {
+    font-size: var(--font-size-xs);
+    color: var(--color-danger);
+    margin-top: -8px;
+}
+
+/* ---------- DETAIL GRID ---------- */
+.detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 10px;
+}
+
+.detail-item label {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+}
+
+.detail-item span {
+    font-size: var(--font-size-md);
+    font-weight: 700;
+}

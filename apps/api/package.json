@@ -1,0 +1,47 @@
+{
+    "name": "@adsd-sm2/api",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "dev": "esbuild-scripts watch",
+        "build": "esbuild-scripts build",
+        "preview": "node ../../dist/api/index.js",
+        "test": "vitest --run --coverage",
+        "test:watch": "vitest",
+        "test:watch-with-coverage": "vitest --coverage",
+        "test:ui": "vitest --coverage --ui",
+        "eslint": "eslint ./src",
+        "eslint:fix": "eslint ./src --fix"
+    },
+    "dependencies": {
+        "@types/bcryptjs": "^2.4.6",
+        "bcryptjs": "^3.0.3",
+        "cookie-parser": "1.4.7",
+        "cors": "2.8.6",
+        "dotenv": "^17.3.1",
+        "eslint": "^9.39.3",
+        "express": "5.2.1",
+        "jsonwebtoken": "^9.0.3",
+        "mysql2": "3.16.3",
+        "reflect-metadata": "^0.2.2",
+        "typeorm": "^0.3.28"
+    },
+    "devDependencies": {
+        "@hboictcloud/esbuild-plugin-typechecks": "^1.x",
+        "@hboictcloud/esbuild-scripts": "^2.x",
+        "@hboictcloud/metadata": "^2.x",
+        "@hboictcloud/typechecks-plugin-interfaces": "^1.x",
+        "@types/cookie-parser": "1.4.10",
+        "@types/cors": "2.8.19",
+        "@types/express": "5.0.6",
+        "@types/jsonwebtoken": "^9.0.10",
+        "@types/supertest": "6.0.3",
+        "@vitest/coverage-istanbul": "^4.0.18",
+        "esbuild": "0.27.3",
+        "node-mocks-http": "^1.17.2",
+        "supertest": "7.2.2",
+        "vitest": "^4.0.18",
+        "vitest-fetch-mock": "^0.4.5",
+        "vitest-mock-extended": "^3.1.0"
+    }
+}

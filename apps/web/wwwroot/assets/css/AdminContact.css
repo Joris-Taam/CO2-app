@@ -1,0 +1,94 @@
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  align-items: center;
+  justify-content: center;
+}
+
+.more-info-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: var(--radius-md);
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--transition),
+    transform var(--transition),
+    box-shadow var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.more-info-btn:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.more-info-btn:active {
+  transform: scale(0.96);
+}
+
+.modal.show {
+  display: flex;
+}
+
+#view-message .modal-content {
+  width: 520px;
+  background: var(--color-white);
+  padding: 28px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+}
+
+#view-message h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* form layout  */
+#view-message-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* inputs styling inside modal */
+#view-message-form input,
+#view-message-form textarea {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 10px 12px;
+  font-size: var(--font-size-sm);
+}
+
+/* textarea height improvement */
+#contact-description {
+  min-height: 140px;
+  resize: none;
+  line-height: 1.4;
+}
+
+/* close button nicer */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  border: none;
+  background: transparent;
+  font-size: 22px;
+  cursor: pointer;
+  color: var(--color-text-muted);
+  transition: color var(--transition);
+}
+
+.close-btn:hover {
+  color: var(--color-danger);
+}

@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    background: #42ba82;
+    background: linear-gradient(180deg,
+        rgba(66, 186, 130, 1) 10%,
+        rgba(255, 255, 255, 1) 100%);
+}
+
+.container {
+  background: white;
+  max-width: 500px;
+  margin: auto;
+  margin-top: 10px;
+  padding: 32px;
+  padding-top: 10px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+#ritFormulier {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+  margin-top: 14px;
+}
+
+label:first-of-type {
+  margin-top: 0;
+}
+
+input,
+select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 16px;
+  border-radius: 25px;
+  border: 2px solid #5bc48d;
+  outline: none;
+  font-size: 14px;
+  transition: border-color 0.2s;
+}
+
+input:focus,
+select:focus {
+  border-color: #2da36a;
+}
+
+/* Error messages */
+.error {
+  color: #e74c3c;
+  font-size: 13px;
+  margin-top: 4px;
+  display: block;
+  min-height: 16px;
+}
+
+/* Submit button */
+button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 24px;
+  border-radius: 25px;
+  border: none;
+  background: #5bc48d;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #4ab37d;
+}
+
+button:disabled {
+  background: #a5d6bb;
+  cursor: not-allowed;
+}
+
+/* Success message */
+.success {
+  color: #27ae60;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+.fab-button {
+    position: fixed;
+    bottom: 20px; right: 20px;
+    width: 60px; height: 60px;
+    background: white;
+    border: 2px solid var(--primary-green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--primary-green);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .container {
+    padding: 24px;
+  }
+
+  main {
+    padding: 20px 10px;
+  }
+}

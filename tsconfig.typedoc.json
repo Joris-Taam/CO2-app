@@ -1,0 +1,10 @@
+{
+    "extends": "./tsconfig.json",
+    "include": [
+        "./apps/api/global.d.ts",
+        "./apps/api/src",
+        "./apps/shared",
+        "./apps/web/global.d.ts",
+        "./apps/web/src"
+    ]
+}

@@ -1,0 +1,26 @@
+lighthouse:
+    stage: test
+    when: always
+    image: node:22
+    tags:
+        - hva
+    interruptible: true
+    needs:
+        - build
+    before_script:
+        - apt-get update && apt-get install -y chromium --no-install-recommends
+        - npm install -g @lhci/cli serve
+    script:
+        - export CHROME_PATH=$(which chromium)
+        - serve dist/web -p 8080 &
+        - sleep 3
+        - URLS=$(find dist/web -name "*.html" | sed 's|dist/web|http://localhost:8080|' | tr '\n' ' ')
+        - echo "Gevonden paginas - $URLS"
+        - lhci autorun --collect.url=$URLS
+    artifacts:
+        paths:
+            - .lighthouseci/
+    rules:
+        - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+        - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+        - when: manual

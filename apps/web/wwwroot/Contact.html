@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/assets/css/Contact.css" />
+        <title>Contact</title>
+    </head>
+    <body>
+        <navigation-component></navigation-component>
+        <section class="container">
+            <section class="formSection">
+                <h1>Neem contact met ons op</h1>
+                <p>Op deze pagina kan je contact met ons opnemen</p>
+                <h2>Stel hier je vragen</h2>
+                <form class="contactForm">
+                    <input type="text" id="name" name="name" placeholder="Naam" />
+                    <input type="email" id="email" name="email" placeholder="Email@address.nl" /><br />
+                    <textarea id="description" name="description" placeholder="Vul hier uw bericht in"></textarea><br />
+                    <input type="submit" value="Opsturen" class="submit" />
+                </form>
+            </section>
+        </section>
+        <script type="module" src="/src/pages/Contact.ts"></script>
+    </body>
+</html>

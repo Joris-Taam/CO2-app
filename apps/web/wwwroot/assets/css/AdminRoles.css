@@ -1,0 +1,73 @@
+/* Column sizing  */
+table td:nth-child(3),
+table td:nth-child(4) {
+    width: 1%;
+    white-space: nowrap;
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition);
+    z-index: 1000;
+}
+
+.modal.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-content {
+    background: var(--color-white);
+    padding: 30px 40px;
+    width: 450px;
+    max-width: 90%;
+
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+
+    transform: scale(0.8);
+    transition: transform var(--transition);
+}
+
+.modal.show .modal-content {
+    transform: scale(1);
+}
+
+/*  Close button  */
+
+
+.close-btn {
+    float: right;
+    font-size: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text-muted);
+}
+
+.close-btn:hover {
+    color: var(--color-danger);
+}
+
+/* Forms inside modal  */
+#create-role-form,
+#edit-role-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Error text */
+.field-error {
+    color: var(--color-danger);
+    font-size: var(--font-size-xs);
+    margin-top: -8px;
+}

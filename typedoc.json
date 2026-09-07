@@ -1,0 +1,33 @@
+{
+    "$schema": "https://typedoc.org/schema.json",
+    "entryPoints": ["./apps/api/src", "./apps/shared", "./apps/web/src"],
+    "entryPointStrategy": "expand",
+    "projectDocuments": ["./docs/index.md"],
+    "out": "./dist/docs",
+    "searchInDocuments": true,
+    "searchInComments": true,
+    "includeVersion": true,
+    "validation": true,
+    "packagesRequiringDocumentation": [
+        "@adsd-sm2/api",
+        "@adsd-sm2/web",
+    ],
+    "readme": "none",
+    "excludePrivate": false,
+    "visibilityFilters": {
+        "private": true,
+        "protected": true,
+        "inherited": true
+    },
+    "exclude": [
+        "**/node_modules/**"
+    ],
+    "navigationLinks": {
+        "Ad SD Knowledgebase": "https://adsd-hva.nl/",
+        "HBO-ICT.Cloud": "https://hbo-ict.cloud/"
+    },
+    "ignoredHighlightLanguages": ["mermaid"],
+    "customCss": "./docs/.typedoc/custom.css",
+    "customJs": "./docs/.typedoc/custom.js",
+    "tsconfig": "./tsconfig.typedoc.json"
+}

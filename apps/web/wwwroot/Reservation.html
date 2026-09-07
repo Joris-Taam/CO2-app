@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Reserveringen</title>
+        <link rel="stylesheet" href="/assets/css/global.css" />
+        <link rel="stylesheet" href="/assets/css/ReservationOverview.css" />
+    </head>
+    <body>
+        <admin-sidebar></admin-sidebar>
+
+        <main>
+            <h1>Reserveringen</h1>
+
+            <div class="flex-center mb-2">
+                <button id="open-create" class="btn btn-add btn-lg">    Reserveer een auto</button>
+            </div>
+
+            <reservation-table id="reservation-table"></reservation-table>
+        </main>
+
+        <reservation-detail id="reservation-detail"></reservation-detail>
+        <reservation-form id="reservation-form"></reservation-form>
+
+        <script type="module" src="/src/pages/ReservationOverview.ts"></script>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="assets/css/AdminReports.css" />
+        <title>Management Overzicht</title>
+    </head>
+    <body>
+        <admin-sidebar></admin-sidebar>
+        <main>
+            <section class="statsContainer">
+                <section class="stats">
+                    <h3 id="totalTitle">Totale CO2 Uitstoot</h3>
+                    <p id="totalValue">Laden...</p>
+                </section>
+            </section>
+
+            <section class="filters">
+                <select name="charts" id="charts">
+                    <option value="co2">Co2</option>
+                    <option value="kilometers">Kilometers</option>
+                    <option value="totalTrips">Totale Ritten</option>
+                </select>
+                <select id="departmentFilter">
+                    <option value="">Alle afdelingen</option>
+                </select>
+                <div class="periodButtons">
+                    <button class="btn btn-period" id="charts" data-period="month">Maand</button>
+                    <button class="btn btn-period" id="charts" data-period="year">Jaar</button>
+                </div>
+                <input type="date" id="startDate" />
+                <input type="date" id="endDate" />
+                <button class="btn btn-add" id="filterBtn">Filteren</button>
+                <button class="btn btn-export" id="exportBtn">Exporteren</button>
+            </section>
+
+            <section class="chartContainer">
+                <canvas id="barChart"></canvas>
+            </section>
+        </main>
+        <script type="module" src="/src/pages/AdminReports.ts"></script>
+    </body>
+</html>

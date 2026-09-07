@@ -1,0 +1,37 @@
+{
+    "name": "@adsd-sm2/root",
+    "version": "1.0.0",
+    "private": true,
+    "workspaces": [
+        "apps/*"
+    ],
+    "scripts": {
+        "dev": "npm run dev --workspace=apps/api",
+        "typedoc": "npx typedoc"
+    },
+    "devDependencies": {
+        "@hboictcloud/eslint-plugin": "^3.x",
+        "@types/bcrypt": "^6.0.0",
+        "@types/jest": "^30.0.0",
+        "@types/node": "^22.19.19",
+        "@vitest/coverage-istanbul": "4.0.18",
+        "@vitest/ui": "4.0.18",
+        "jest": "^30.3.0",
+        "node-mocks-http": "1.17.2",
+        "ts-jest": "^29.4.9",
+        "typedoc": "0.28.16",
+        "typescript": "5.9.3",
+        "vite-tsconfig-paths": "6.0.5",
+        "vitest": "4.0.18",
+        "vitest-fetch-mock": "0.4.5",
+        "vitest-mock-extended": "3.1.0"
+    },
+    "comments": {
+        "typescript": "Set to 5.7.3 because vite 7.1.5 doesn't officially support it yet!"
+    },
+    "dependencies": {
+        "bcryptjs": "^3.0.3",
+        "eslint": "^9.13.0",
+        "express": "^5.2.1"
+    }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ Page</title>
+
+  <link rel="stylesheet" href="/assets/css/global.css">
+  <link rel="stylesheet" href="/assets/css/AdminFaq.css">
+</head>
+
+<body>
+  <admin-sidebar></admin-sidebar>
+
+  <main>
+    <h1>Frequently Asked Questions</h1>
+
+    <button class="btn btn-add mb-2" id="open-create">
+      + Nieuwe FAQ
+    </button>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Naam</th>
+          <th>Categorie</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="faq-container"></tbody>
+    </table>
+
+    <div id="faq-modal" class="modal">
+      <div class="modal-content">
+        <button id="close-modal" class="close-btn">✕</button>
+        <h2>FAQ toevoegen</h2>
+
+        <form id="create-faq-form">
+          <input type="text" id="faq-question" placeholder="Naam" required />
+          <textarea id="faq-description" placeholder="Beschrijving" required></textarea>
+          <input type="text" id="faq-category" placeholder="Categorie" required />
+
+          <button type="submit" class="btn btn-primary">
+            Opslaan
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="/src/pages/AdminFaq.ts"></script>
+</body>
+</html>

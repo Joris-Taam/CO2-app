@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Voertuig Overzicht</title>
+        <link rel="stylesheet" href="/assets/css/global.css" />
+        <link rel="stylesheet" href="/assets/css/VehicleOverview.css" />
+    </head>
+    <body>
+        <admin-sidebar></admin-sidebar>
+
+        <main>
+            <h1>Voertuig Overzicht</h1>
+
+            <button id="open-create" class="btn btn-add mb-2">+ Voertuig toevoegen</button>
+
+            <table class="faq-table">
+                <thead>
+                    <tr>
+                        <th>Kenteken</th>
+                        <th>Merk</th>
+                        <th>Model</th>
+                        <th>Bouwjaar</th>
+                        <th>Brandstof</th>
+                        <th>Afdeling</th>
+                        <th>Status</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="vehicle-table-body"></tbody>
+            </table>
+        </main>
+
+        <!-- Create modal -->
+        <div class="modal" id="create-modal">
+            <div class="modal-content">
+                <button class="close-btn" id="close-create">&times;</button>
+                <h2>Voertuig toevoegen</h2>
+                <form id="create-vehicle-form">
+                    <input type="text" id="create-number-plate" placeholder="Kenteken" autocomplete="off" />
+                    <span class="field-error" id="create-number-plate-error"></span>
+                    <input type="text" id="create-brand" placeholder="Merk" autocomplete="off" />
+                    <span class="field-error" id="create-brand-error"></span>
+                    <input type="text" id="create-model" placeholder="Model" autocomplete="off" />
+                    <span class="field-error" id="create-model-error"></span>
+                    <input type="number" id="create-model-year" placeholder="Bouwjaar" autocomplete="off" />
+                    <span class="field-error" id="create-model-year-error"></span>
+                    <input type="text" id="create-fuel-type" placeholder="Brandstoftype (optioneel)" autocomplete="off" />
+                    <input type="text" id="create-department" placeholder="Afdeling (optioneel)" autocomplete="off" />
+                    <button type="submit" class="btn btn-primary">Toevoegen</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Edit modal -->
+        <div class="modal" id="edit-modal">
+            <div class="modal-content">
+                <button class="close-btn" id="close-edit">&times;</button>
+                <h2>Voertuig wijzigen</h2>
+                <form id="edit-vehicle-form">
+                    <input type="text" id="edit-brand" placeholder="Merk" autocomplete="off" />
+                    <span class="field-error" id="edit-brand-error"></span>
+                    <input type="text" id="edit-model" placeholder="Model" autocomplete="off" />
+                    <span class="field-error" id="edit-model-error"></span>
+                    <input type="number" id="edit-model-year" placeholder="Bouwjaar" autocomplete="off" />
+                    <span class="field-error" id="edit-model-year-error"></span>
+                    <input type="text" id="edit-fuel-type" placeholder="Brandstoftype (optioneel)" autocomplete="off" />
+                    <input type="text" id="edit-department" placeholder="Afdeling (optioneel)" autocomplete="off" />
+                    <button type="submit" class="btn btn-primary">Opslaan</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Detail modal -->
+        <div class="modal" id="detail-modal">
+            <div class="modal-content">
+                <button class="close-btn" id="close-detail">&times;</button>
+                <h2>Voertuig details</h2>
+                <div id="detail-content" class="detail-grid"></div>
+            </div>
+        </div>
+
+        <script type="module" src="/src/pages/VehicleOverview.ts"></script>
+    </body>
+</html>
